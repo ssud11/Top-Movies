@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { Context } from "../../context";
-import spin from "../layout/Spin.js";
+import Loading from "../layout/Loading.js";
 import Movie from "./Movie";
 
 const Movies = () => {
   const [state] = useContext(Context);
-  const { movie_list, heading } = state;
+  var { movie_list, heading } = state;
 
   if (movie_list === undefined || movie_list.length === 0) {
-    return <spin />;
+    return <h3 className="text-center mb-4">{heading}</h3>;
   } else {
     return (
       <>

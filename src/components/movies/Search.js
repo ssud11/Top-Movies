@@ -38,7 +38,7 @@ const Search = () => {
   return (
     <div className="card card-body mb-4 p-4">
       <h1 className="display-4 text-center">
-       Find out the Top Movies<br/> for your country! <i className="fas fa-globe-americas"></i>
+       Find out the Top Movies<br/> in your country! <i className="fas fa-globe-americas"></i>
       </h1>
       <form onSubmit={findCountry}>
         <div className="form-group">
@@ -51,6 +51,7 @@ const Search = () => {
             onChange={onChange}
           />
         </div>
+        <div id = "results"></div>
         <button className="btn btn-dark" type="submit">
           Search
         </button>
