@@ -15,6 +15,8 @@ const Search = () => {
           process.env.REACT_APP_MOVIE_KEY}&region=${movieCountry}`
       )
       .then(res => {
+        console.log(`https://api.themoviedb.org/3/movie/top_rated?api_key=${
+          process.env.REACT_APP_MOVIE_KEY}&region=${movieCountry}`);
         console.log(res.data.results);
         let movie_list = res.data.results;
       setState({ movie_list: movie_list, heading: `Search Results for country ISO: ${movieCountry}` });
